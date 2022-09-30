@@ -23,21 +23,38 @@ BibTeX:
 
 
 ## Quick Overview
-
+This paper proposes a similarity score between the ordered sequences of services individuals receive that leverages the structure of the inferred network in addition to historical observations to identify individuals with similar trajectories. In doing so, the service an individual will be assigned to next can be predicted. Extensive experiments show that the proposed approach performs well not only on predicting exit from the system, or simply guessing high frequency services (as most baselines), but is also successful in less frequent scenarios. 
 
 
 ### Prerequisites
 Python 2.7 or above and the following libraries
 ```
-pandas, mumpy, matplotlib, os, sklearn
+pandas, numpy, networkx, random, datetime, matplotlib, seaborn, os, 
 ```
 
 ### Files
 ```
    ToyDataset.csv: A sample dataset with the features and trajectories. 
+   Functions.ipynb: Contains the functions associated with the rest of files
+   Evaluation.ipynb: Evaluates proposed methods in comparison to the baselines
+   Train_Test_set: Splits the data into train and test set
+   Pre processing - Transition graph.ipynb: Creates the transition graphs
+   Historical data and overlap computation: Extracts the trajectories with temporal overlap with the test set and computes the overlap
+   Method 1_Similarity info computation: Computes the information necessary for similarity computaion for TRACE_1
+   Method 1_Similarity computation and Prediction: Computes the similarity and the corresponding prediction for TRACE_1
+   Method 2_Similarity info computation: Computes the information necessary for similarity computaion for TRACE_2
+   Method 2_Similarity computation and Prediction: Computes the similarity and the corresponding prediction for TRACE_2
+   Baseline_Similarity info computation: Computes the information necessary for similarity computaion for the baselines
+   Baseline_Similarity computation and Prediction: Computes the similarity and the corresponding prediction for the baselines
 ```
 
 ### How to use
-The blah
 
-1. 
+The toy dataset shows a snippet of the data used after data cleaning and feature preprocessing have been done. This data can be directly run through the jupyter notebook files for the following purposes:
+
+1. Split the data into train and test set
+2. Extract the trajectories with temporal overlap with the test set and compute overlap
+3. Compute the various transition graphs
+4. Compute the information necessary for similarity computation and corresponding similarity for the proposed method and the baselines
+5. Predict the next assignment using the method and the baselines
+6. Evaluate the precision and recall for each model and compare them.
