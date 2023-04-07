@@ -29,7 +29,7 @@ This paper proposes a similarity score between the ordered sequences of services
 ### Prerequisites
 Python 2.7 or above and the following libraries
 ```
-pandas, numpy, networkx, random, datetime, matplotlib, seaborn, os, 
+pandas, numpy, networkx, random, datetime, matplotlib, seaborn, os, sklearn
 ```
 
 ### Files
